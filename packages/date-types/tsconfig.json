@@ -1,0 +1,15 @@
+{
+  "extends": ["../../tsconfig.base.json"],
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "declarationDir": "./dist",
+    "preserveSymlinks": true,
+    "paths": {
+      "@shared-types/*": ["src/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "../number-types" }]
+}

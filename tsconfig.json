@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "references": [
+    { "path": "./packages/date-types" },
+    { "path": "./packages/number-types" },
+    { "path": "./packages/string-types" }
+  ],
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "**/dist", "**/.turbo", "**/.cache"]
+}

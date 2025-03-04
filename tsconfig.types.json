@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true, // Optional, but helpful for source maps
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true // Speeds up type-checking for third-party libs
+  }
+}

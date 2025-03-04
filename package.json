@@ -1,0 +1,18 @@
+{
+  "name": "@slowebworkz/types-library",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js", 
+  "files": ["dist"],
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.8.2"
+  },
+  "type": "module"
+}

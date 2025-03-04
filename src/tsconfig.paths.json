@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.node.json",
+  "compilerOptions": {
+    "rootDir": "../",
+    "baseUrl": ".",
+    "paths": {
+      "@paths/*": ["./paths/*"],
+      "*": [
+        "../packages/date-types/src/*",
+        "../packages/number-types/src/*",
+        "../packages/string-types/src/*"
+      ]
+    }
+  }
+}

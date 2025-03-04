@@ -1,0 +1,19 @@
+# bunfig.toml (root of the monorepo)
+
+[install]
+dev = true
+
+[build]
+cmd = "tsc -b"
+
+[workspace]
+packages = ["packages/*"]
+
+[fs]
+include = ["dist"]
+
+[publish]
+private = true
+
+[compat]
+type = "module"

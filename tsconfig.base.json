@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.paths.json",
+  "compilerOptions": {
+    "moduleDetection": "force",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "allowImportingTsExtensions": true
+  }
+}
