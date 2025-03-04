@@ -1,0 +1,1 @@
+export type { Digit, NonZeroDigit, NonNegativeInteger, NoLeadingZeroInteger } from '../src/digits'

@@ -1,0 +1,12 @@
+{
+  "name": "types-utils",
+  "module": "./",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/jsonfile": "^6.1.4"
+  },
+  "dependencies": {
+    "jsonfile": "^6.1.0"
+  }
+}
