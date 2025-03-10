@@ -11,10 +11,7 @@
     "build": "tsc -b"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@slowebworkz/string-types": "workspace:*",
-=======
->>>>>>> c8bbd1f683b75e979d03226e610e43f052b62f00
     "@types/bun": "latest",
     "typescript": "^5.8.2"
   },
