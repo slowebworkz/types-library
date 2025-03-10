@@ -9,6 +9,6 @@
     { "path": "./packages/number-types" },
     { "path": "./packages/string-types" }
   ],
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "./packages/**/*"],
   "exclude": ["node_modules", "**/dist", "**/.turbo", "**/.cache"]
 }
