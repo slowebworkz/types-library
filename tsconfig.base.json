@@ -2,8 +2,8 @@
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "moduleDetection": "force",
-    "outDir": "dist",
-    "rootDir": "src",
+    "outDir": "./dist",
+    "rootDir": "./",
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,

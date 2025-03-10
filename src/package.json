@@ -4,7 +4,8 @@
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/jsonfile": "^6.1.4"
+    "@types/jsonfile": "^6.1.4",
+    "@types/node": "^22.13.10"
   },
   "dependencies": {
     "jsonfile": "^6.1.0"

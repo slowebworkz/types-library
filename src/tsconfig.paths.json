@@ -4,7 +4,6 @@
     "rootDir": "../",
     "baseUrl": ".",
     "paths": {
-      "@paths/*": ["./paths/*"],
       "*": [
         "../packages/date-types/src/*",
         "../packages/number-types/src/*",
