@@ -1,19 +1,14 @@
 // src/package.d.ts
-import type { Semver } from "@strings/semver";
+import type { Semver } from './semver'
 import type {
   MinTwoCharString,
-  NoLeadingSpecialChar,
-  NoSpaces,
-} from "@strings/chars";
-import type { SPDX_License } from "@strings/licences";
+} from './chars'
+import type { SPDX_License } from './licences'
 
-type Dependencies = Record<
-  | "dependencies"
-  | "devDependencies"
-  | "peerDependencies"
-  | "optionalDependencies",
-  Record<string, Semver>
->;
+
+const Deps = ["dependencies", "devDependencies", "peerDependencies", "optionalDependencies"] as const;
+
+type Dependencies = Record<(typeof Deps)[number], Record<string, Semver>>;
 
 type Author<T extends string = MinTwoCharString> =
   | T
@@ -23,7 +18,7 @@ type Author<T extends string = MinTwoCharString> =
       url?: T;
     };
 
-type Url = MinTwoCharString;
+type Url<T = MinTwoCharString> = T;
 
 type Engines<T = MinTwoCharString> = Record<T, Semver | T>;
 
@@ -72,10 +67,7 @@ type PackageJSONName<T extends string> = T extends `${infer First}${infer Rest}`
     : never
   : T;
 
-interface OptionalPackageJSON<T = MinTwoCharString>
-  extends Dependencies,
-    Urls,
-    Strings {
+interface OptionalPackageJSON<T = MinTwoCharString> extends Dependencies, Urls<T>, Strings<T> {
   private: boolean;
 }
 

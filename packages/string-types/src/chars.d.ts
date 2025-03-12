@@ -15,7 +15,7 @@ export type MinTwoCharString = `${string}${string}`;
  * // Invalid
  * const invalidStr: NoLeadingSpecialChar<'_example'> = '_example'; // Error
  */
-export type NoLeadingSpecialChar<T extends string> =
+export type NoLeadingSpecialChar<T extends MinTwoCharString> =
   T extends `${"." | "_"}${string}` ? never : T;
 
 /**

@@ -1,7 +1,7 @@
 /**
  * Imports single digit and non-zero digit types.
  */
-import type { Digit, NonZeroDigit } from "@numbers/digits";
+import type { NonZeroDigit } from "@numbers/digits";
 
 /**
  * Represents a valid month of the year from "1" to "12".

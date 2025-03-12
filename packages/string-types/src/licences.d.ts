@@ -1,5 +1,4 @@
-import type { NoLeadingZeroInteger } from "@numbers/digits";
-import type { MinTwoCharString } from "./chars";
+import type { MinTwoCharString } from './chars'
 
 /**
  * A constant array that contains a list of valid SPDX license identifiers.
@@ -42,6 +41,8 @@ const SPDX_LICENSES = [
   "UNLICENSED",
 ] as const;
 
+type SPDX_LICENSES_TYPE = (typeof SPDX_LICENSES)[number];
+
 /**
  * Represents a single license object with a type and associated URL.
  * 
@@ -49,7 +50,7 @@ const SPDX_LICENSES = [
  * `SPDX_LICENSES` array) and a URL (which must be at least 2 characters long).
  * 
  * @interface LicenseObject
- * @property {typeof SPDX_LICENSES[number]} type - The type of the license, which should be one of the SPDX license identifiers.
+ * @property {SPDX_LICENSES_TYPE} type - The type of the license, which should be one of the SPDX license identifiers.
  * @property {MinTwoCharString} url - The URL associated with the license, which must be at least two characters long.
  * 
  * @example
@@ -60,7 +61,7 @@ const SPDX_LICENSES = [
  * };
  */
 interface LicenseObject {
-  type: (typeof SPDX_LICENSES)[number];
+  type: SPDX_LICENSES_TYPE;
   url: MinTwoCharString;
 }
 
@@ -82,4 +83,4 @@ interface LicenseObject {
  *   { type: "Apache-2.0", url: "https://opensource.org/licenses/Apache-2.0" }
  * ];
  */
-export type SPDX_License = (typeof SPDX_LICENSES)[number] | LicenseObject[];
+export type SPDX_License = SPDX_LICENSES_TYPE | LicenseObject[];

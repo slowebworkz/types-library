@@ -7,12 +7,16 @@
   "private": true,
   "workspaces": ["packages/*"],
   "scripts": {
-    "build": "tsc -b"
+    "build": "tsc -b",
+    "eslint": "bunx eslint 'packages/**/*.{ts,tsx}'"
   },
   "devDependencies": {
+    "@eslint/js": "^9.22.0",
     "@slowebworkz/string-types": "workspace:*",
     "@types/bun": "latest",
-    "typescript": "^5.8.2"
+    "eslint": "^9.22.0",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1"
   },
   "type": "module",
   "dependencies": {
