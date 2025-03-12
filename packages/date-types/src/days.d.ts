@@ -1,7 +1,7 @@
 /**
  * Imports single digit and non-zero digit types.
  */
-import type { Digit, NonZeroDigit } from "@numbers/digits";
+import type { Digit, NonZeroDigit } from '@numbers/digits'
 
 /**
  * Represents the possible days for the first nine days of the month.
@@ -17,7 +17,7 @@ type FirstDays<T = ""> = `${T}${NonZeroDigit}`;
 type LastDays = `${1 | 2}${Digit}` | "30" | "31";
 
 /**
- * Represents a valid day of the month from "1" to "31".
+ * Represents a valid day of the month from '1' to "31".
  */
 export type Day = `${FirstDays}` | `${LastDays}`;
 

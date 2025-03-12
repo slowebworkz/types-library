@@ -1,7 +1,7 @@
 /**
  * Imports single digit and non-zero digit types.
  */
-import type { Digit, NonZeroDigit } from "@numbers/digits";
+import type { Digit, NonZeroDigit } from '@numbers/digits'
 
 /**
  * Represents the century part of a four-digit year.

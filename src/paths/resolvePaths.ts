@@ -1,4 +1,4 @@
-import { resolve } from "node:path";
+import { resolve } from 'node:path';
 
 /**
  * Resolves a single path with an accumulation of paths.

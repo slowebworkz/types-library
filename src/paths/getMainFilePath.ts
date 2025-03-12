@@ -1,5 +1,5 @@
-import { dirname } from "node:path";
-import { cwd } from "node:process";
+import { dirname } from 'node:path';
+import { cwd } from 'node:process';
 
 /**
  * Type representing the main file path of the current process.

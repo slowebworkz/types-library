@@ -5,7 +5,10 @@
     "outDir": "./dist",
     "moduleResolution": "node",
     "declarationDir": "./dist",
-    "preserveSymlinks": true,
+    "paths": {
+      "@shared-types/*": ["src/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

@@ -1,5 +1,5 @@
-import type { NoLeadingZeroInteger } from "@numbers/digits";
-import type { MinTwoCharString } from "./chars";
+import type { NoLeadingZeroInteger } from '@numbers/digits'
+import type { MinTwoCharString } from './chars'
 
 // Major, Minor, and Patch are non-negative integers with no leading zeros
 type Major = `${NoLeadingZeroInteger}`;
