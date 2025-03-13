@@ -1,7 +1,7 @@
 import getMainFilePath from './paths/getMainFilePath.ts';
 import getPackageJSON from './paths/getPackageJSON.ts';
 
-import type { PackageJSON } from 'package.d.ts'
+import type { PackageJSON } from '@slowebworkz/string-types';
 
 export async function getPackagesDirectory(): Promise<
   PackageJSON["workspaces"] | null

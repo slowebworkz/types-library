@@ -1,1 +1,3 @@
-export type { Digit, NonZeroDigit, NonNegativeInteger, NoLeadingZeroInteger } from '../src/digits'
+//src/index.ts
+
+export * from '../src/digits'

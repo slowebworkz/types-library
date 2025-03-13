@@ -1,7 +1,7 @@
 import { readFile } from 'fs/promises';
 import { resolve } from 'node:path';
 
-import type { PackageJSON } from 'package.d.ts'
+import type { PackageJSON } from '@slowebworkz/string-types'
 
 const PACKAGE_JSON = "package.json" as const;
 const ENCODING = "utf-8" as const;

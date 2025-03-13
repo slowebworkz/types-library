@@ -3,6 +3,9 @@
   "compilerOptions": {
     "moduleResolution": "nodenext",
   },
+  "references": [
+    { "path": "../packages/string-types" }
+  ],
   "include": [
     "**/*.ts",
     "**/*.tsx",
