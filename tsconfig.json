@@ -6,6 +6,7 @@
   "files": [],
   "references": [
     { "path": "./packages/date-types" },
+    { "path": "./packages/network-types" },
     { "path": "./packages/number-types" },
     { "path": "./packages/string-types" }
   ],

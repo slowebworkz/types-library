@@ -3,17 +3,17 @@
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist",
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
+    "module": "Node16",
     "declarationDir": "./dist",
     "paths": {
-      "@shared-types/*": ["src/*"],
-      "@numbers/*": ["../number-types/src/*"]
+      "@shared-types/*": ["src/*"]
     }
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"],
   "references": [
-    { "path": "../network-types" },
-    { "path": "../number-types" }
+    { "path": "../number-types" },
+    { "path": "../string-types" }
   ]
 }

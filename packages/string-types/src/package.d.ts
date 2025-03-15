@@ -1,5 +1,6 @@
 // src/package.d.ts
-import type { Semver } from './semver'
+
+import type { Semver } from '@slowebworkz/network-types'
 import type {
   MinTwoCharString,
 } from './chars'
