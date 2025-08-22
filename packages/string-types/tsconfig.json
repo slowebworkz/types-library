@@ -12,8 +12,5 @@
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"],
-  "references": [
-    { "path": "../network-types" },
-    { "path": "../number-types" }
-  ]
+  
 }

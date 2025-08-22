@@ -1,28 +1,28 @@
 {
   "name": "@slowebworkz/types-library",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "type": "module",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "tsc -b",
     "eslint": "bunx eslint 'packages/**/*.{ts,tsx}'"
   },
   "devDependencies": {
-    "@eslint/js": "^9.22.0",
-    "@slowebworkz/date-types": "workspace:*",
-    "@slowebworkz/network-types": "workspace:*",
-    "@slowebworkz/number-types": "workspace:*",
-    "@slowebworkz/string-types": "workspace:*",
+    "@effective/prettier": "^0.2.1",
     "@types/bun": "latest",
+    "@types/node": "^24.3.0",
+    "@types/prettier": "^3.0.0",
     "eslint": "^9.22.0",
+    "eslint-plugin-toml": "^0.12.0",
+    "type-fest": "^4.41.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.1"
-  },
-  "type": "module",
-  "dependencies": {
-    "@types/node": "^22.13.10"
   }
 }
