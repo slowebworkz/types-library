@@ -6,8 +6,7 @@
     "declarationDir": "./dist",
     "composite": true,
     "paths": {
-      "@shared-types/*": ["src/*"],
-      "@numbers/*": ["../number-types/src/*"]
+      "@shared-types/*": ["src/*"]
     }
   },
   "include": ["src"],

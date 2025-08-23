@@ -1,18 +1,17 @@
-// scripts/build-all.ts
-import entryPoints from './getEntryPoints.js'
+#!/usr/bin/env bun
+
 import { $ } from 'bun'
+import { readdirSync, statSync } from 'fs'
+import { join } from 'path'
 
-const packageNames = Array.from(
-  new Set(
-    entryPoints
-      .filter((path) => path.startsWith('packages/'))
-      .map((path) => path.split('/')[1]), // get package name
-  ),
+const packagesDir = 'packages'
+const packageDirs = readdirSync(packagesDir).filter((name) =>
+  statSync(join(packagesDir, name)).isDirectory(),
 )
 
-const packageBuilds = packageNames.map(
-  (pkg) => $`bun run build packages/${pkg}`,
-)
+const buildPromises = packageDirs.map((pkg) => {
+  const tsconfigPath = join(packagesDir, pkg, 'tsconfig.json')
+  return $`bunx tsc --build ${tsconfigPath}`
+})
 
-await Promise.all(packageBuilds)
-console.log('All packages built.')
+await Promise.all(buildPromises)
