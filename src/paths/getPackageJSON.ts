@@ -1,7 +1,7 @@
 import { readFile } from 'fs/promises'
 import { resolve } from 'node:path'
 
-import type { PackageJSON } from '@slowebworkz/string-types'
+import type { PackageJson } from 'type-fest'
 
 const PACKAGE_JSON = 'package.json' as const
 const ENCODING = 'utf-8' as const
@@ -34,7 +34,7 @@ async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
  * @param dir - The directory path.
  * @returns The parsed package.json content or null if an error occurs.
  */
-export default async function getPackageJSON<T extends PackageJSON>(
+export default async function getPackageJSON<T extends PackageJson>(
   dir: string,
 ): Promise<T> {
   const packageJsonPath = getPackageJSONPath(dir)

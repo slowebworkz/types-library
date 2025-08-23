@@ -1,10 +1,10 @@
 import getMainFilePath from './paths/getMainFilePath.ts'
 import getPackageJSON from './paths/getPackageJSON.ts'
 
-import type { PackageJSON } from '@slowebworkz/string-types'
+import type { PackageJson } from 'type-fest'
 
 export async function getPackagesDirectory(): Promise<
-  PackageJSON['workspaces'] | null
+  PackageJson['workspaces'] | null
 > {
   const rootDir = getMainFilePath()
   try {
