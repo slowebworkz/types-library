@@ -1,3 +1,3 @@
 //src/index.ts
 
-export * from '../src/digits'
+export type * from './digits.ts'

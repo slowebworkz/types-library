@@ -2,6 +2,7 @@
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "moduleDetection": "force",
+    "module": "NodeNext",
     "outDir": "./dist",
     "rootDir": "./",
     "strict": true,

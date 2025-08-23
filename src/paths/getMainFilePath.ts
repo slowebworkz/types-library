@@ -1,19 +1,15 @@
-import { dirname } from 'node:path';
-import { cwd } from 'node:process';
-
-/**
- * Type representing the main file path of the current process.
- * If Bun.main is defined, it uses the type of Bun.main; otherwise, it uses the return type of cwd.
- */
-type MainFilePath = typeof Bun extends { main: string }
-  ? typeof Bun.main
-  : ReturnType<typeof cwd>;
+import { dirname } from 'node:path'
+import { cwd } from 'node:process'
 
 /**
  * Gets the main file path of the current process.
  *
- * @returns The main file path.
+ * - In Bun, returns the directory of `Bun.main`.
+ * - In Node, returns `process.cwd()`.
  */
-export default function getMainFilePath(): MainFilePath {
-  return Bun?.main ? dirname(Bun.main) : cwd();
+export default function getMainFilePath(): string {
+  if (typeof Bun !== 'undefined' && typeof Bun.main === 'string') {
+    return dirname(Bun.main)
+  }
+  return cwd()
 }

@@ -1,3 +1,3 @@
-export * from '../src/chars'
-export * from '../src/licences'
-export *  from '../src/package'
+export type * from './chars.js'
+export type * from './licences.js'
+export type * from './package.js'

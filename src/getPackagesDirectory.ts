@@ -1,29 +1,17 @@
-import getMainFilePath from './paths/getMainFilePath.ts';
-import getPackageJSON from './paths/getPackageJSON.ts';
+import getMainFilePath from './paths/getMainFilePath.ts'
+import getPackageJSON from './paths/getPackageJSON.ts'
 
-import type { PackageJSON } from '@slowebworkz/string-types';
+import type { PackageJSON } from '@slowebworkz/string-types'
 
 export async function getPackagesDirectory(): Promise<
-  PackageJSON["workspaces"] | null
+  PackageJSON['workspaces'] | null
 > {
-  // Get the directory of the main entry file
-  const rootDir = getMainFilePath();
-
+  const rootDir = getMainFilePath()
   try {
-    const packageJson = await getPackageJSON(rootDir);
-
-    if (!packageJson) {
-      throw new Error();
-    }
-
-    // Extract the "workspaces" property
-    if (packageJson?.workspaces) {
-      const { workspaces } = packageJson;
-      return workspaces;
-    }
+    const packageJson = await getPackageJSON(rootDir)
+    return packageJson?.workspaces ?? null
   } catch (error) {
-    console.error("Error reading package.json or finding workspaces:", error);
-    throw error;
+    console.error('Error reading package.json or finding workspaces:', error)
+    return null
   }
-  return null;
 }

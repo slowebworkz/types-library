@@ -1,19 +1,6 @@
 {
   "name": "@slowebworkz/types-library",
   "version": "1.0.0",
-  "type": "module",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {
-    "build": "tsc -b",
-    "eslint": "bunx eslint 'packages/**/*.{ts,tsx}'"
-  },
   "devDependencies": {
     "@effective/prettier": "^0.2.1",
     "@types/bun": "latest",
@@ -24,5 +11,20 @@
     "type-fest": "^4.41.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.1"
-  }
+  },
+  "files": [
+    "dist"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "tsc -b",
+    "format": "bunx @effective/prettier --config .prettierrc.toml --ignore-path .prettierignore --write 'src/**/*.{ts,tsx,js,jsx}' 'packages/**/*.{ts,tsx,js,jsx}'",
+    "build:all": "bun run format && bun run src/build-all.ts",
+    "eslint": "bunx eslint 'packages/**/*.{ts,tsx}'"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "workspaces": [
+    "packages/*"
+  ]
 }

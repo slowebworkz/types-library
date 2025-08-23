@@ -1,0 +1,5 @@
+export type * from './build_metadata.ts'
+export type * from './dotted_string.ts'
+export type * from './main_semantic_version.ts'
+export type * from './pre_release_version.ts'
+export type * from './segment.ts'
