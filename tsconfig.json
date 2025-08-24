@@ -1,15 +1,12 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-  "moduleResolution": "NodeNext",
-  "target": "ES2020"
+    "moduleResolution": "NodeNext",
+    "target": "ES2020",
+    "declaration": true,
+    "declarationDir": "./dist",
+    "outDir": "./dist"
   },
-  "references": [
-    { "path": "./packages/date-types" },
-    { "path": "./packages/network-types" },
-    { "path": "./packages/number-types" },
-    { "path": "./packages/string-types" }
-  ],
-  "include": ["src/**/*.ts", "./packages/**/*"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "**/dist", "**/.turbo", "**/.cache"]
 }

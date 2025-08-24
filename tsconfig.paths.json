@@ -3,10 +3,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@root/*": ["./*"],
-      "@dates/*": ["./packages/date-types/src/*"],
-      "@numbers/*": ["./packages/number-types/src/*"],
-      "@strings/*": ["./packages/string-types/src/*"]
+      "@/*": ["./*"],
+      "@numbers/*": ["./src/numbers/*"],
+      "@date/*": ["./src/date/*"],
+      "@strings/*": ["./src/strings/*"],
+      "@network/*": ["./src/network/*"]
     }
   }
 }

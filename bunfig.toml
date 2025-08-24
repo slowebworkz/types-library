@@ -6,9 +6,6 @@ dev = true
 [build]
 cmd = "tsc -b"
 
-[workspace]
-packages = ["packages/*"]
-
 [fs]
 include = ["dist"]
 
