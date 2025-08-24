@@ -8,6 +8,7 @@
     "@types/prettier": "^3.0.0",
     "eslint": "^9.22.0",
     "eslint-plugin-toml": "^0.12.0",
+    "tsdown": "^0.14.1",
     "type-fest": "^4.41.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.1"
@@ -17,9 +18,9 @@
   ],
   "private": true,
   "scripts": {
-    "build": "bun run format && tsc -b",
-    "format": "bunx @effective/prettier --config .prettierrc.toml --ignore-path .prettierignore --write 'src/**/*.{ts,tsx,js,jsx}'",
-    "eslint": "bunx eslint 'src/**/*.{ts,tsx}'"
+    "build": "bun run format && bunx tsdown",
+    "format": "bunx @effective/prettier --config .prettierrc.toml --ignore-path .prettierignore --write './**/*.{ts,tsx,js,jsx}'",
+    "lint": "bunx eslint './**/*.{ts,tsx,js,jsx,toml}'"
   },
   "type": "module",
   "types": "dist/index.d.ts"

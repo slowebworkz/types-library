@@ -9,28 +9,28 @@ export default tseslint.config(
   {
     rules: {
       // Enforce consistent type definitions — prefer interfaces
-      "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+      '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
 
       // Catch unused variables, especially in type declarations
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        { argsIgnorePattern: "^_" },
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_' },
       ],
 
       // Ensure module boundaries are well-defined
-      "@typescript-eslint/explicit-module-boundary-types": ["warn"],
+      '@typescript-eslint/explicit-module-boundary-types': ['warn'],
 
       // Prefer type-only imports to avoid runtime overhead
-      "@typescript-eslint/consistent-type-imports": [
-        "error",
-        { prefer: "type-imports" },
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        { prefer: 'type-imports' },
       ],
 
       // Prevent empty interfaces unless they extend something
-      "@typescript-eslint/no-empty-interface": ["error"],
+      '@typescript-eslint/no-empty-interface': ['error'],
 
       // Enforce consistent member ordering in interfaces and types
-      "@typescript-eslint/member-ordering": ["error"],
+      '@typescript-eslint/member-ordering': ['error'],
     },
-  }
-);
+  },
+)
